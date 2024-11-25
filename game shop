@@ -1,0 +1,60 @@
+import random
+
+glist = ["far cry", "fall out", "resident evil"]
+
+def show_inv(games):
+    print (sorted(games))
+
+def add_game(games):
+    newG = input("add your game to the inventory ")
+    games.append(newG)
+    games.sort()
+    print(games)
+
+def delete_game(games):
+    oldG = input("what game do you want to remove")
+    if oldG in games:
+        games.remove(oldG)
+        games.sort()
+        print(games)
+    else:
+        print("doesnt exist")
+       
+def Sale(games):
+    num_words = 2  # Number of random words to print
+
+    random_words = random.sample(games, num_words)
+
+    for word in random_words:
+        print(word)
+   
+def GameAv(games):
+    game = input("is there a game you would like to check?")
+    if game in games:
+        print(game, "is in the inventory")
+    else:
+        print("that game is not in the inventory")
+
+
+
+while True:
+    print("1.show inventory")
+    print("2.add a game")
+    print("3.delete a game")
+    print("4.generate sale")
+    print("5.check game availability")
+    print("6.quit")
+    user_input = int(input("ENTER your choice: "))
+   
+    if user_input == 1:
+        show_inv(glist)
+    elif user_input == 2:
+        add_game(glist)
+    elif user_input == 3:
+        delete_game(glist)
+    elif user_input == 4:
+        Sale(glist)
+    elif user_input == 5:
+        GameAv(glist)
+    elif user_input == 6:
+        break
