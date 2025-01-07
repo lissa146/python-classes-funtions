@@ -1,0 +1,15 @@
+
+
+
+class Npc:
+    def __init__(self,name,dialogue,quest,position):
+        self.name = name
+        self.dialouge = dialogue
+        self.quest = quest
+    def talk(self, dialouge, quest):
+        if self.quest == True:
+            if self.dialouge == True:
+                print("howdy there ive been waiting for you")
+    def move(position):
+        self.position = 100
+        print("you can move up")
