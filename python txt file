@@ -1,0 +1,41 @@
+file = open('example','w')
+file.write("hello this is text file.\n")
+file.write("this is a test file.\n")
+file.close()
+
+file = open('example', 'r')
+content = file.read()
+print(content)
+file.close()
+
+file = open('example','a')
+file.write("this is an appened line.\n")
+file.close()
+
+file = open('example', 'r')
+content = file.read()
+print(content)
+file.close()
+
+
+
+
+animal = open('example','w')
+animal.write("elephant.\n")
+animal.write("donkey.\n")
+animal.write("monkey.\n")
+animal.close()
+
+animal = open('example', 'r')
+mal = animal.read()
+print(mal)
+animal.close()
+
+animal = open('example','a')
+animal.write("doc Mo.\n")
+animal.close()
+
+animal = open('example', 'r')
+mal = animal.read()
+print(mal)
+animal.close()
